@@ -3,7 +3,7 @@
 int main(int argc, char* argv[])
 {
 	int array_size = atoi(argv[1]);
-	
+
 	int *first_vector, *second_vector;
 	first_vector = (int*)calloc(array_size, sizeof(int));
 	second_vector = (int*)calloc(array_size, sizeof(int));
@@ -24,6 +24,10 @@ int main(int argc, char* argv[])
 
 
 	printf("\nFirst item of result = %d", result_vector[0]);
+
+	free(first_vector);
+	free(second_vector);
+	free(result_vector);
 
 	return 0;
 }
